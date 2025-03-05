@@ -1,32 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 13:53:44 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/05 13:54:52 by meandrad         ###   ########.fr       */
+/*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
+/*   Updated: 2025/03/05 13:56:07 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <stdbool.h>
-# include <limits.h> 
-# include "libft/libft.h"
-
-typedef struct s_stack_node
-{
-	int					nbr;
-	int					index;
-	int					push_cost;
-	bool				above_mediam;
-	bool				cheapest;
-	struct s_stack_node	*target_node;
-	struct s_stack_node	*next;
-	struct s_stack_node	*prev;
-}	t_stack_node;
-
-#endif
+void	init_stack_a()
