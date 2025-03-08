@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macmac <macmac@student.42.fr>              +#+  +:+       +#+        */
+/*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:09:33 by meandrad          #+#    #+#             */
-/*   Updated: 2024/10/31 13:20:14 by macmac           ###   ########.fr       */
+/*   Updated: 2025/03/08 10:34:26 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr(int n)
 {
 	char	list[11];
 	int		i;
 
 	i = 0;
 	if (n == 0)
-		write(fd, "0", 1);
+		write(1, "0", 1);
 	if (n == -2147483648)
 	{
-		write(fd, "-2147483648", 11);
+		write(1, "-2147483648", 11);
 		return ;
 	}
 	if (n < 0)
 	{
-		write(fd, "-", 1);
+		write(1, "-", 1);
 		n *= -1;
 	}
 	while (n > 0)
@@ -36,5 +36,5 @@ void	ft_putnbr_fd(int n, int fd)
 		n /= 10;
 	}
 	while (i > 0)
-		write(fd, &list[--i], 1);
+		write(1, &list[--i], 1);
 }
