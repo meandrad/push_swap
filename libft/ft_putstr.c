@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:09:36 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/08 10:46:16 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/08 10:51:57 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_putstr(char *s)
 {
-	int	j;
+	int	i;
 
-	j = 0;
-	while (s[j] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		ft_putchar(s[j]);
-		j++;
+		ft_putchar(s[i]);
+		i++;
 	}
 }

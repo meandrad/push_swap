@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:09:24 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/08 10:49:18 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/08 10:50:58 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char ca)
+void	ft_putchar(char c)
 {
-	write(1, &ca, 1);
+	write(1, &c, 1);
 }

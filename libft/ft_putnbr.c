@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:09:33 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/08 10:47:20 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/08 10:51:40 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_putnbr(int n)
 {
 	if (n >= 10)
 		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + '0');
+	ft_putchar((n % 10) + '0');
 }
