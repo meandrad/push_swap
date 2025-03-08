@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:09:33 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/08 10:34:26 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/08 10:47:20 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,7 @@
 
 void	ft_putnbr(int n)
 {
-	char	list[11];
-	int		i;
-
-	i = 0;
-	if (n == 0)
-		write(1, "0", 1);
-	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		n *= -1;
-	}
-	while (n > 0)
-	{
-		list[i++] = (n % 10) + '0';
-		n /= 10;
-	}
-	while (i > 0)
-		write(1, &list[--i], 1);
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	ft_putchar(n % 10 + '0');
 }
