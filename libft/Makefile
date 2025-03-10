@@ -6,7 +6,7 @@
 #    By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/19 18:19:46 by meandrad          #+#    #+#              #
-#    Updated: 2024/10/26 15:16:36 by meandrad         ###   ########.fr        #
+#    Updated: 2025/03/10 19:05:27 by meandrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,14 @@ SRC = ft_atoi.c \
       ft_strjoin.c \
       ft_strncmp.c \
       ft_putchar_fd.c \
-      ft_putnbr_fd.c \
-      ft_putstr_fd.c \
-      ft_putendl_fd.c \
+      ft_putnbr.c \
+      ft_putstr.c \
+      ft_putendl.c \
       ft_itoa.c \
 	  ft_strtrim.c \
 	  ft_strmapi.c \
-	  ft_striteri.c
+	  ft_striteri.c \
+	  ft_atol.c \
 
 OBJS = $(SRC:.c=.o)
 RM = rm -f
