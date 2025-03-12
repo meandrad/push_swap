@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:36:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/06 21:36:39 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/08 10:56:48 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ void	free_stack(t_stack_node **a)
 void	print_error(t_stack_node **a)
 {
 	free_stacl(a);
-	ft_printf("Error\n"); //fix: include ft_printf on libft
+	ft_putstr("Error\n"); //fix: include ft_printf on libft
 	exit(1); //read exit manual again
 }
