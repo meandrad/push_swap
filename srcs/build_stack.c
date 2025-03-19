@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/18 20:23:07 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/19 10:51:46 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	add_node(t_stack_node **a, int n)
 {
 	t_stack_node	*new_node;
-	t_stack_node	*last;
+	t_stack_node	*last_node;
 
 	if (!a)
 		return ;
@@ -32,9 +32,9 @@ static void	add_node(t_stack_node **a, int n)
 	}
 	else
 	{
-		last = search_node(*a);
-		last->next = new_node;
-		new_node->prev = last;
+		last_node = search_node(*a);
+		last_node->next = new_node;
+		new_node->prev = last_node;
 	}
 }
 
