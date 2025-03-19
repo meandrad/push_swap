@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:53:14 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/06 20:08:32 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/18 20:04:13 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	main(int argc, char *argv[])
 	b = NULL;
 	if (argc == 1 || argc == 2 && argv[1][0] == '\0')
 		return (1);
-	init_stack_a(&a, argv + 1);
+	start_stack_a(&a, argv + 1);
 }

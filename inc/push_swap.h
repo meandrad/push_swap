@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:56:21 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/11 20:37:50 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/18 20:04:21 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-void	init_stack_a(t_stack_node *a, char *argv[]);
+void	start_stack_a(t_stack_node *a, char *argv[]);
 int		ft_stack_len(t_stack_node *stack);
 
 void	print_error(t_stack_node **a);
