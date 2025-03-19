@@ -6,15 +6,15 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:17:49 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/06 21:22:27 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:24:41 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_isspace(int c)
+int	ft_isspace(int c)
 {
-	if (c >= 9 && c <= 13 || c == 32)
+	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);
 	else
 		return (0);

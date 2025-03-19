@@ -6,9 +6,11 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 21:44:54 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/06 21:26:27 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:21:03 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

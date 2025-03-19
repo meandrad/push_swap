@@ -6,11 +6,11 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:09:24 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/08 10:50:58 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:23:48 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar(char c)
 {
