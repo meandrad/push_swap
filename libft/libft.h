@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 18:46:55 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/08 10:55:40 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:23:35 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
