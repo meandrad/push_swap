@@ -21,6 +21,6 @@ fclean: clean
 	@$(MAKE) -C libft fclean
 	rm -rf $(NAME)
 
-re: clean fclean
+re: fclean all
 
 .PHONY: all clean fclean re
