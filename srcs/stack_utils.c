@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:42:18 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/21 20:31:33 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:31:24 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-t_stack_node *search_last_node(t_stack_node *stack)
+t_stack_node	*search_last_node(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
