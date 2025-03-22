@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 19:30:42 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/20 01:44:00 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/21 21:26:47 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,22 @@ static void	swap_stack(t_stack_node **head)
 	(*head)->prev = NULL;
 }
 
-void	sa(t_stack_node **a)
+void	sa(t_stack_node **stack_a)
 {
-	swap_stack(a);
+	swap_stack(stack_a);
 	ft_putstr("sa");
 	ft_putchar('\n');
 }
 
-void	sb(t_stack_node **b)
+void	sb(t_stack_node **stack_b)
 {
-	swap_stack(b);
+	swap_stack(stack_b);
 	ft_putstr("sb");
 	ft_putchar('\n');
+}
+
+void	ss(t_stack_node **stack_a, t_stack_node **stack_b)
+{
+	swap_stack(stack_a);
+	swap_stack(stack_b);
 }
