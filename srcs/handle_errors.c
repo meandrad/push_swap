@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:36:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/14 14:55:50 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:30:46 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,11 @@ int	handle_duplicate(t_stack_node *a, int n)
 
 void	free_stack(t_stack_node **a)
 {
-	//learn more about lists before build this function
 }
 
 void	print_error(t_stack_node **a)
 {
 	free_stacl(a);
 	ft_putstr("Error\n");
-	exit(1); //read exit manual again
+	exit(1);
 }
