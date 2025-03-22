@@ -6,11 +6,11 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 18:51:20 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/22 14:38:49 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/22 17:19:34 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "../../inc/push_swap.h"
 
 void	rotate_stack(t_stack_node **head)
 {
