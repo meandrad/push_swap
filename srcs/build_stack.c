@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/21 18:55:14 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:39:09 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	start_stack_a(t_stack_node *a, char *argv[])
 			print_error(a);
 		if (handle_duplicate(&a, (int)n))
 			print_error(a);
-		add_node(a, (int)n); //create add_node
+		add_node(a, (int)n);
 		i++;
 	}
 }
