@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 19:30:42 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/21 21:26:47 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:29:44 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	swap_stack(t_stack_node **head)
 	(*head)->prev->prev = *head;
 	(*head)->prev->next = (*head)->next;
 	if ((*head)->next != NULL)
-		(*head->next-prev = (*head)->prev);
+		(*head)->next->prev = (*head)->prev;
 	(*head)->next = (*head)->prev;
 	(*head)->prev = NULL;
 }
