@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 18:51:20 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/21 21:34:04 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/22 14:38:49 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	rotate_stack(t_stack_node **head)
 {
-	t_stack_node *tail;
-	
+	t_stack_node	*tail;
+
 	if (!*head || !(*head)->next)
 		return ;
 	tail = search_last_node(*head);
@@ -26,20 +26,21 @@ void	rotate_stack(t_stack_node **head)
 	tail->next->next = NULL;
 }
 
-void	ra(t_stack_node t_stack_node **stack_a)
-{
-	rotate_stack(stack_a);
-	ft_putstr("ra");
-	ft_putchar("\n");
-}
-void	rb(t_stack_node t_stack_node **stack_b)
+void	ra(t_stack_node **stack_a)
 {
 	rotate_stack(stack_a);
 	ft_putstr("ra");
 	ft_putchar("\n");
 }
 
-void	rr(t_stack_node t_stack_node **stack_a, t_stack_node t_stack_node **stack_b)
+void	rb(t_stack_node **stack_b)
+{
+	rotate_stack(stack_b);
+	ft_putstr("ra");
+	ft_putchar("\n");
+}
+
+void	rr(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	rotate_stack(stack_a);
 	rotate_stack(stack_b);
