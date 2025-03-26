@@ -1,7 +1,16 @@
 NAME = push_swap
 CC = cc
 FLAGS = -Wall -Wextra -Werror -g
-SRCS = 
+SRCS = \
+	srcs/handle_errors.c \
+	srcs/stack_utils.c \
+	srcs/push_swap.c \
+	srcs/build_stack.c \
+	srcs/instructions/sort_three_nodes.c \
+	srcs/instructions/push_stack.c \
+	srcs/instructions/swap_stack.c \
+	srcs/instructions/reverse_rotate_stack.c \
+	srcs/instructions/rotate_stack.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
