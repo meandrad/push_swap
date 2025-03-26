@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:36:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/22 14:30:46 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/25 21:35:48 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,26 +30,40 @@ int	error_input(char *s)
 	return (0);
 }
 
-int	handle_duplicate(t_stack_node *a, int n)
+int	handle_duplicate(t_stack_node *stack, int n)
 {
-	if (!a)
+	if (!stack)
 		return (0);
-	while (a)
+	while (stack)
 	{
-		if (a->nbr == n)
+		if (stack->nbr == n)
 			return (1);
-		a = a->next;
+		stack = stack->next;
 	}
 	return (0);
 }
 
-void	free_stack(t_stack_node **a)
+void	free_stack(t_stack_node **stack)
 {
+	t_stack_node	*temp;
+	t_stack_node	*current;
+
+	if (!*stack)
+		return ;
+	current = *stack;
+	while ((*stack)->next != NULL)
+	{
+		temp = current->next;
+		current->nbr = 0;
+		free(current);
+		current = temp;
+	}
+	*stack = NULL;
 }
 
-void	print_error(t_stack_node **a)
+void	print_error(t_stack_node **stack)
 {
-	free_stacl(a);
+	free_stacl(stack);
 	ft_putstr("Error\n");
 	exit(1);
 }
