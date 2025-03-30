@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 14:39:41 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/30 18:31:02 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	add_node(t_stack_node **stack_a, int n)
 	}
 }
 
-void	start_stack_a(t_stack_node *stack_a, char *argv[])
+void	start_stack_a(t_stack_node **stack_a, char *argv[])
 {
 	long	n;
 	int		i;

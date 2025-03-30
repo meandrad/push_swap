@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 13:19:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 15:28:29 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/30 18:11:08 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ static void	send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b)
 
 	cheapest = search_cheapest(*stack_a);
 	if (cheapest->above_mediam && cheapest->target_node->above_mediam)
-		double_rotation(*stack_a, *stack_b, cheapest);
+		double_rr(*stack_a, *stack_b, cheapest);
 	else if (!(cheapest->above_mediam)
 		&& !(cheapest->target_node->above_mediam))
-		double_reverse_rotate(*stack_a, *stack_b, cheapest);
+		double_rrr(*stack_a, *stack_b, cheapest);
 	prep_for_push(stack_a, cheapest, 'a');
 	prep_for_push(stack_b, cheapest->target_node, 'b');
 	pb(stack_b, stack_a);

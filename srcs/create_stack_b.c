@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:46:28 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 12:04:05 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/30 18:19:36 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-static void	search_target_a(t_stack_node *stack_a, t_stack_node *stack_b)
+void	search_target_a(t_stack_node *stack_a, t_stack_node *stack_b)
 {
 	t_stack_node	*node_a;
 	t_stack_node	*target_node;

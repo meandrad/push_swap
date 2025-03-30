@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:56:21 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 13:09:54 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/30 18:25:49 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,45 +29,49 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
-//utils
-t_stack_node	*search_last_node(t_stack_node *stack);
-t_stack_node	*search_max(t_stack_node *stack);
-t_stack_node	*search_min(t_stack_node *stack);
-int				stack_len(t_stack_node *stack);
-
-//instructions
-void			push_stack(t_stack_node **stack1, t_stack_node **stack2);
-void			pa(t_stack_node **stack_a, t_stack_node **stack_b);
-void			pb(t_stack_node **stack_a, t_stack_node **stack_b);
-void			reverse_rotate(t_stack_node **head);
-void			rrr(t_stack_node **stack_a, t_stack_node **stack_b);
-void			rra(t_stack_node **stack_a);
-void			rrb(t_stack_node **stack_b);
-void			rotate_stack(t_stack_node **head);
-void			rr(t_stack_node **stack_a, t_stack_node **stack_b);
-void			ra(t_stack_node **stack_a);
-void			rb(t_stack_node **stack_b);
-void			swap_stack(t_stack_node **head);
-void			ss(t_stack_node **stack_a, t_stack_node **stack_b);
-void			sa(t_stack_node **stack_a);
-void			sb(t_stack_node **stack_b);
-void			sort_three_nodes(t_stack_node **stack);
-
-//srcs
-static void		add_node(t_stack_node **a, int n);
-void			start_stack_a(t_stack_node *a, char *argv[]);
-void			set_index(t_stack_node *stack);
-static void		search_target_b(t_stack_node *stack_a, t_stack_node *stack_b);
-void			set_cost(t_stack_node *stack_a, t_stack_node *stack_b);
-void			cheapest(t_stack_node *stack);
-void			create_stack(t_stack_node *stack_a, t_stack_node *stack_b);
-static void		search_target_a(t_stack_node *stack_a, t_stack_node *stack_b);
-void			creat_stack_b(t_stack_node *stack_a, t_stack_node *stack_b);
+// ./
+bool			stack_sorted(t_stack_node *stack);
 int				error_input(char *s);
 int				handle_duplicate(t_stack_node *stack, int n);
-void			free_stack(t_stack_node **stack);
-void			print_error(t_stack_node **stack);
-t_stack_node	*search_last_node(t_stack_node *stack);
 int				stack_len(t_stack_node *stack);
+void			add_node(t_stack_node **stack_a, int n);
+void			cheapest(t_stack_node *stack);
+void			creat_stack_b(t_stack_node *stack_a, t_stack_node *stack_b);
+void			create_stack_a(t_stack_node *stack_a, t_stack_node *stack_b);
+void			free_stack(t_stack_node **stack);
+void			prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name);
+void			print_error(t_stack_node **stack);
+void			put_min_top(t_stack_node **stack_a);
+void			search_target_a(t_stack_node *stack_a, t_stack_node *stack_b);
+void			search_target_b(t_stack_node *stack_a, t_stack_node *stack_b);
+void			set_cost(t_stack_node *stack_a, t_stack_node *stack_b);
+void			set_index(t_stack_node *stack);
+void			start_stack_a(t_stack_node *stack_a, char *argv[]);
+t_stack_node	*search_max(t_stack_node *stack);
+t_stack_node	*search_min(t_stack_node *stack);
+t_stack_node	*search_last_node(t_stack_node *stack);
+
+// instructions/
+void			double_rr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap);
+void			double_rrr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap);
+void			pa(t_stack_node **stack_a, t_stack_node **stack_b);
+void			pb(t_stack_node **stack_a, t_stack_node **stack_b);
+void			push_stack(t_stack_node **stack1, t_stack_node **stack2);
+void			ra(t_stack_node **stack_a);
+void			rb(t_stack_node **stack_b);
+void			reverse_rotate(t_stack_node **head);
+void			rotate_stack(t_stack_node **head);
+void			rr(t_stack_node **stack_a, t_stack_node **stack_b);
+void			rra(t_stack_node **stack_a);
+void			rrb(t_stack_node **stack_b);
+void			rrr(t_stack_node **stack_a, t_stack_node **stack_b);
+void			sa(t_stack_node **stack_a);
+void			sb(t_stack_node **stack_b);
+void			send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b);
+void			send_b_to_a(t_stack_node **stack_a, t_stack_node **stack_b);
+void			sort(t_stack_node **stack_a, t_stack_node **stack_b);
+void			sort_three_nodes(t_stack_node **stack);
+void			ss(t_stack_node **stack_a, t_stack_node **stack_b);
+void			swap_stack(t_stack_node **head);
 
 #endif

@@ -11,6 +11,7 @@ SRCS = \
 	srcs/instructions/sort_three_nodes.c \
 	srcs/instructions/push_stack.c \
 	srcs/instructions/swap_stack.c \
+	srcs/instructions/sort_stack.c \
 	srcs/instructions/reverse_rotate_stack.c \
 	srcs/instructions/rotate_stack.c
 OBJS = $(SRCS:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:13:49 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 15:19:58 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/30 18:20:33 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	set_index(t_stack_node *stack)
 	index = 0;
 	if (!stack)
 		return ;
-	median = ft_stack_len(stack) / 2;
+	median = stack_len(stack) / 2;
 	while (stack != NULL)
 	{
 		stack->index = index;
@@ -33,7 +33,7 @@ void	set_index(t_stack_node *stack)
 	}
 }
 
-static void	search_target_b(t_stack_node *stack_a, t_stack_node *stack_b)
+void	search_target_b(t_stack_node *stack_a, t_stack_node *stack_b)
 {
 	t_stack_node	*node_b;
 	t_stack_node	*target_node;
@@ -65,8 +65,8 @@ void	set_cost(t_stack_node *stack_a, t_stack_node *stack_b)
 	int	length_a;
 	int	length_b;
 
-	length_a = ft_stack_len(stack_a);
-	length_b = ft_stack_len(stack_b);
+	length_a = stack_len(stack_a);
+	length_b = stack_len(stack_b);
 	while (stack_a != NULL)
 	{
 		stack_a->push_cost = stack_a->index;
