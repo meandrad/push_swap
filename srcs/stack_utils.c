@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:42:18 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 15:04:12 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/30 15:28:06 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,13 @@ t_stack_node	*search_min(t_stack_node *stack)
 	return (smallest_node);
 }
 
-bool	stack_sorted(t_stack_node *stack)
+void	put_min_top(t_stack_node **stack_a)
 {
-	if (!stack)
-		return (1);
-	while (stack->next)
+	while ((*stack_a)->nbr != search_min(*stack_a)->nbr)
 	{
-		if (stack->nbr > stack->next->nbr)
-			return (false);
-		stack = stack->next;
+		if (search_min(*stack_a)->above_mediam)
+			ra(stack_a);
+		else
+			rra(stack_a);
 	}
-	return (true);
 }
-
