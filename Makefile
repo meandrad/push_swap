@@ -3,6 +3,8 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror -g
 SRCS = \
 	srcs/handle_errors.c \
+	srcs/create_stack_a.c \
+	srcs/create_stack_b.c \
 	srcs/stack_utils.c \
 	srcs/push_swap.c \
 	srcs/build_stack.c \
