@@ -6,11 +6,24 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:53:14 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 13:18:43 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/30 15:28:11 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
+
+bool	stack_sorted(t_stack_node *stack)
+{
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->nbr > stack->next->nbr)
+			return (false);
+		stack = stack->next;
+	}
+	return (true);
+}
 
 int	main(int argc, char *argv[])
 {
@@ -22,9 +35,9 @@ int	main(int argc, char *argv[])
 	if (argc == 1 || argc == 2 && argv[1][0] == '\0')
 		return (1);
 	else if (argc == 2)
-		argv = ft_split(argv[1],' ');
+		argv = ft_split(argv[1], ' ');
 	start_stack_a(&stack_a, argv + 1);
-	if (stack_sorted(stack_a))
+	if (stack_sorted(stack_a) == false)
 	{
 		if (stack_len(stack_a) == 2)
 			sa(&stack_a);
@@ -33,7 +46,6 @@ int	main(int argc, char *argv[])
 		else
 			sort_stack(&stack_a, &stack_b);
 	}
-	free_stack(stack_a);
+	free_stack(&stack_a);
 	return (0);
 }
-	
