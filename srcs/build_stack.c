@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 18:31:02 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:13:48 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-static void	add_node(t_stack_node **stack_a, int n)
+void	add_node(t_stack_node **stack_a, int n)
 {
 	t_stack_node	*new_node;
 	t_stack_node	*last_node;
@@ -40,7 +40,7 @@ static void	add_node(t_stack_node **stack_a, int n)
 
 void	start_stack_a(t_stack_node **stack_a, char *argv[])
 {
-	long	n;
+	long	number;
 	int		i;
 
 	i = 0;
@@ -48,12 +48,12 @@ void	start_stack_a(t_stack_node **stack_a, char *argv[])
 	{
 		if (error_input(argv[i]))
 			print_error(stack_a);
-		n = ft_atol(argv[i]);
-		if (n > INT_MAX || n < INT_MIN)
+		number = ft_atol(argv[i]);
+		if (number > INT_MAX || number < INT_MIN)
 			print_error(stack_a);
-		if (handle_duplicate(&stack_a, (int)n))
+		if (handle_duplicate(*stack_a, (int)number))
 			print_error(stack_a);
-		add_node(stack_a, (int)n);
+		add_node(stack_a, (int)number);
 		i++;
 	}
 }

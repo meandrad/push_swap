@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 13:19:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 18:11:08 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:21:42 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-static void	double_rr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
+void	double_rr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
 {
 	while (*b != cheap->target_node && *a != cheap)
 		rr(a, b);
@@ -20,30 +20,30 @@ static void	double_rr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
 	set_index(*b);
 }
 
-static void	double_rrr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
+void	double_rrr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
 {
 	while (*b != cheap->target_node && *a != cheap)
-		rrr(*a, *b);
+		rrr(a, b);
 	set_index(*a);
 	set_index(*b);
 }
 
-static void	send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b)
+void	send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	t_stack_node	*cheapest;
 
 	cheapest = search_cheapest(*stack_a);
 	if (cheapest->above_mediam && cheapest->target_node->above_mediam)
-		double_rr(*stack_a, *stack_b, cheapest);
+		double_rr(stack_a, stack_b, cheapest);
 	else if (!(cheapest->above_mediam)
 		&& !(cheapest->target_node->above_mediam))
-		double_rrr(*stack_a, *stack_b, cheapest);
+		double_rrr(stack_a, stack_b, cheapest);
 	prep_for_push(stack_a, cheapest, 'a');
 	prep_for_push(stack_b, cheapest->target_node, 'b');
 	pb(stack_b, stack_a);
 }
 
-static void	send_b_to_a(t_stack_node **stack_a, t_stack_node **stack_b)
+void	send_b_to_a(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	prep_for_push(stack_a, (*stack_b)->target_node, 'a');
 	pa(stack_a, stack_b);
@@ -66,7 +66,7 @@ void	sort(t_stack_node **stack_a, t_stack_node **stack_b)
 	sort_three_nodes(stack_a);
 	while (*stack_b != NULL)
 	{
-		creat_stack_b(*stack_a, *stack_b);
+		create_stack_b(*stack_a, *stack_b);
 		send_b_to_a(stack_a, stack_b);
 	}
 	set_index(*stack_a);

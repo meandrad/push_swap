@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:56:21 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 18:25:49 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:23:02 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int				handle_duplicate(t_stack_node *stack, int n);
 int				stack_len(t_stack_node *stack);
 void			add_node(t_stack_node **stack_a, int n);
 void			cheapest(t_stack_node *stack);
-void			creat_stack_b(t_stack_node *stack_a, t_stack_node *stack_b);
+void			create_stack_b(t_stack_node *stack_a, t_stack_node *stack_b);
 void			create_stack_a(t_stack_node *stack_a, t_stack_node *stack_b);
 void			free_stack(t_stack_node **stack);
 void			prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name);
@@ -46,9 +46,10 @@ void			search_target_a(t_stack_node *stack_a, t_stack_node *stack_b);
 void			search_target_b(t_stack_node *stack_a, t_stack_node *stack_b);
 void			set_cost(t_stack_node *stack_a, t_stack_node *stack_b);
 void			set_index(t_stack_node *stack);
-void			start_stack_a(t_stack_node *stack_a, char *argv[]);
+void			start_stack_a(t_stack_node **stack_a, char *argv[]);
 t_stack_node	*search_max(t_stack_node *stack);
 t_stack_node	*search_min(t_stack_node *stack);
+t_stack_node	*search_cheapest(t_stack_node *stack);
 t_stack_node	*search_last_node(t_stack_node *stack);
 
 // instructions/
@@ -56,7 +57,7 @@ void			double_rr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap);
 void			double_rrr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap);
 void			pa(t_stack_node **stack_a, t_stack_node **stack_b);
 void			pb(t_stack_node **stack_a, t_stack_node **stack_b);
-void			push_stack(t_stack_node **stack1, t_stack_node **stack2);
+void			push_node(t_stack_node **stack1, t_stack_node **stack2);
 void			ra(t_stack_node **stack_a);
 void			rb(t_stack_node **stack_b);
 void			reverse_rotate(t_stack_node **head);

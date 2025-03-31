@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 18:51:20 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/22 17:19:34 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/03/31 19:16:42 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ void	ra(t_stack_node **stack_a)
 {
 	rotate_stack(stack_a);
 	ft_putstr("ra");
-	ft_putchar("\n");
+	ft_putchar('\n');
 }
 
 void	rb(t_stack_node **stack_b)
 {
 	rotate_stack(stack_b);
 	ft_putstr("ra");
-	ft_putchar("\n");
+	ft_putchar('\n');
 }
 
 void	rr(t_stack_node **stack_a, t_stack_node **stack_b)

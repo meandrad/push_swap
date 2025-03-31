@@ -18,9 +18,9 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(LIBFT)
 	@$(MAKE) -C libft
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJS) libft/libft.a -o $(NAME)
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@

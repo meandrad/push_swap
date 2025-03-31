@@ -6,7 +6,7 @@
 #    By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/19 18:19:46 by meandrad          #+#    #+#              #
-#    Updated: 2025/03/19 15:21:39 by meandrad         ###   ########.fr        #
+#    Updated: 2025/03/31 19:32:44 by meandrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ SRC = ft_atoi.c \
 	  ft_strmapi.c \
 	  ft_striteri.c \
 	  ft_atol.c \
-        ft_isspace.c
+        ft_isspace.c\
+        ft_split.c
 
 OBJS = $(SRC:.c=.o)
 RM = rm -f
