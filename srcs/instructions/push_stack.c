@@ -6,46 +6,46 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 23:48:42 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/31 19:16:23 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/02 21:35:54 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-void	push_node(t_stack_node **stack1, t_stack_node **stack2)
+void	push_node(t_stack_node **dest, t_stack_node **src)
 {
 	t_stack_node	*push_node;
 
-	if (!*stack1)
+	if (!*src)
 		return ;
-	push_node = *stack1;
-	(*stack1) = (*stack1)->next;
-	if (*stack1 != NULL)
-		(*stack1)->prev = NULL;
+	push_node = *src;
+	*src = (*src)->next;
+	if (*src)
+		(*src)->prev = NULL;
 	push_node->prev = NULL;
-	if (*stack2 == NULL)
+	if (!*dest)
 	{
-		*stack2 = push_node;
-		(*stack2)->prev = NULL;
+		*dest = push_node;
+		(*dest)->next = NULL;
 	}
 	else
 	{
-		push_node->next = (*stack2);
+		push_node->next = *dest;
 		push_node->next->prev = push_node;
-		(*stack2) = push_node;
+		*dest = push_node;
 	}
 }
 
 void	pa(t_stack_node **stack_a, t_stack_node **stack_b)
 {
-	push_node(stack_b, stack_a);
+	push_node(stack_a, stack_b);
 	ft_putstr("pa");
 	ft_putchar('\n');
 }
 
 void	pb(t_stack_node **stack_a, t_stack_node **stack_b)
 {
-	push_node(stack_a, stack_b);
-	ft_putstr("pa");
+	push_node(stack_b, stack_a);
+	ft_putstr("pb");
 	ft_putchar('\n');
 }

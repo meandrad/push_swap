@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 13:19:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/31 19:21:42 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/02 21:33:37 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,6 @@ void	send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b)
 	pb(stack_b, stack_a);
 }
 
-void	send_b_to_a(t_stack_node **stack_a, t_stack_node **stack_b)
-{
-	prep_for_push(stack_a, (*stack_b)->target_node, 'a');
-	pa(stack_a, stack_b);
-}
 
 void	sort(t_stack_node **stack_a, t_stack_node **stack_b)
 {
@@ -64,10 +59,11 @@ void	sort(t_stack_node **stack_a, t_stack_node **stack_b)
 		send_a_to_b(stack_a, stack_b);
 	}
 	sort_three_nodes(stack_a);
-	while (*stack_b != NULL)
+	while (*stack_b)
 	{
-		create_stack_b(*stack_a, *stack_b);
-		send_b_to_a(stack_a, stack_b);
+		init_nodes_b(*stack_a, *stack_b);
+		prep_for_push(stack_a, (*stack_b)->target_node, 'a');
+		pa(stack_a, stack_b);
 	}
 	set_index(*stack_a);
 	put_min_top(stack_a);

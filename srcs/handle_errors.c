@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:36:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 12:01:36 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:41:44 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	error_input(char *s)
 	return (0);
 }
 
-int	handle_duplicate(t_stack_node *stack, int n)
+int	handle_duplicate(t_stack_node *stack, long n)
 {
 	if (!stack)
 		return (0);
@@ -51,7 +51,7 @@ void	free_stack(t_stack_node **stack)
 	if (!*stack)
 		return ;
 	current = *stack;
-	while ((*stack)->next != NULL)
+	while (current != NULL)
 	{
 		temp = current->next;
 		current->nbr = 0;

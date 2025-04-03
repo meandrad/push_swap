@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:56:21 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/31 19:23:02 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/02 21:34:41 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ typedef struct s_stack_node
 // ./
 bool			stack_sorted(t_stack_node *stack);
 int				error_input(char *s);
-int				handle_duplicate(t_stack_node *stack, int n);
+int				handle_duplicate(t_stack_node *stack, long n);
 int				stack_len(t_stack_node *stack);
-void			add_node(t_stack_node **stack_a, int n);
+void			add_node(t_stack_node **stack_a, long n);
 void			cheapest(t_stack_node *stack);
-void			create_stack_b(t_stack_node *stack_a, t_stack_node *stack_b);
+void			init_nodes_b(t_stack_node *stack_a, t_stack_node *stack_b);
 void			create_stack_a(t_stack_node *stack_a, t_stack_node *stack_b);
 void			free_stack(t_stack_node **stack);
 void			prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name);

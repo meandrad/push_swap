@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/31 19:13:48 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:22:27 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	add_node(t_stack_node **stack_a, int n)
+void	add_node(t_stack_node **stack_a, long n)
 {
 	t_stack_node	*new_node;
 	t_stack_node	*last_node;
@@ -46,14 +46,14 @@ void	start_stack_a(t_stack_node **stack_a, char *argv[])
 	i = 0;
 	while (argv[i])
 	{
-		if (error_input(argv[i]))
+		if (error_input(argv[i]) == 0)
 			print_error(stack_a);
 		number = ft_atol(argv[i]);
 		if (number > INT_MAX || number < INT_MIN)
 			print_error(stack_a);
-		if (handle_duplicate(*stack_a, (int)number))
+		if (handle_duplicate(*stack_a, number))
 			print_error(stack_a);
-		add_node(stack_a, (int)number);
+		add_node(stack_a, number);
 		i++;
 	}
 }
