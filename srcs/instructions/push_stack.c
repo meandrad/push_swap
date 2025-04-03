@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 23:48:42 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/02 21:35:54 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 19:09:06 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	pa(t_stack_node **stack_a, t_stack_node **stack_b)
 	ft_putchar('\n');
 }
 
-void	pb(t_stack_node **stack_a, t_stack_node **stack_b)
+void	pb(t_stack_node **stack_b, t_stack_node **stack_a)
 {
 	push_node(stack_b, stack_a);
 	ft_putstr("pb");
