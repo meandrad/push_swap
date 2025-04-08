@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 23:04:14 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/03 20:04:29 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/08 20:19:47 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,30 +20,27 @@ void	reverse_rotate(t_stack_node **head)
 		return ;
 	tail = search_last_node(*head);
 	tail->prev->next = NULL;
-	tail->next = (*head);
+	tail->next = *head;
 	tail->prev = NULL;
-	(*head) = tail;
+	*head = tail;
 	tail->next->prev = tail;
 }
 
 void	rra(t_stack_node **stack_a)
 {
 	reverse_rotate(stack_a);
-	ft_putstr("rra");
-	ft_putchar('\n');
+	ft_putstr("rra\n");
 }
 
 void	rrb(t_stack_node **stack_b)
 {
 	reverse_rotate(stack_b);
-	ft_putstr("rrb");
-	ft_putchar('\n');
+	ft_putstr("rrb\n");
 }
 
 void	rrr(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
-	ft_putstr("rrr");
-	ft_putchar('\n');
+	ft_putstr("rrr\n");
 }

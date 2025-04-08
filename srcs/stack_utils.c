@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:42:18 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/03 20:50:07 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/08 20:19:29 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_stack_node	*search_last_node(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
-	while (stack->next != NULL)
+	while (stack->next)
 		stack = stack->next;
 	return (stack);
 }
@@ -28,10 +28,10 @@ int	stack_len(t_stack_node *stack)
 	len = 0;
 	if (!stack)
 		return (0);
-	while (stack != NULL)
+	while (stack)
 	{
 		stack = stack->next;
-		len++;
+		++len;
 	}
 	return (len);
 }

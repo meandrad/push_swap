@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:46:28 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/03 20:49:50 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/08 20:16:44 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@ void	set_target_b(t_stack_node *stack_a, t_stack_node *stack_b)
 {
 	t_stack_node	*node_a;
 	t_stack_node	*target_node;
-	long			closest_smaller;
+	long			match;
 
 	while (stack_b)
 	{
-		closest_smaller = LONG_MAX;
+		match = LONG_MAX;
 		node_a = stack_a;
 		while (node_a)
 		{
-			if (node_a->nbr > stack_b->nbr && node_a->nbr < closest_smaller)
+			if (node_a->nbr > stack_b->nbr && node_a->nbr < match)
 			{
-				closest_smaller = node_a->nbr;
+				match = node_a->nbr;
 				target_node = node_a;
 			}
 			node_a = node_a->next;
 		}
-		if (closest_smaller == LONG_MAX)
+		if (match == LONG_MAX)
 			stack_b->target_node = search_min(stack_a);
 		else
 			stack_b->target_node = target_node;
