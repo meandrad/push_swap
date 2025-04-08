@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:42:18 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 18:29:10 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:50:07 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ t_stack_node	*search_min(t_stack_node *stack)
 	long			min;
 	t_stack_node	*smallest_node;
 
-	smallest_node = NULL;
+	smallest_node = stack;
 	if (!stack)
 		return (NULL);
 	min = LONG_MAX;
-	while (stack->next != NULL)
+	while (stack)
 	{
 		if (stack->nbr < min)
 		{

@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 18:51:20 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/31 19:16:42 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:07:31 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,6 @@ void	rr(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	rotate_stack(stack_a);
 	rotate_stack(stack_b);
+	ft_putstr("rr");
+	ft_putchar('\n');
 }

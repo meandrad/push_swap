@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 13:19:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/03 19:08:55 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:50:38 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b)
 	pb(stack_b, stack_a);
 }
 
-
 void	sort(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	int	lenght_a;
@@ -55,13 +54,13 @@ void	sort(t_stack_node **stack_a, t_stack_node **stack_b)
 		pb(stack_b, stack_a);
 	while (lenght_a-- > 3 && !stack_sorted(*stack_a))
 	{
-		create_stack_a(*stack_a, *stack_b);
+		init_stack_a(*stack_a, *stack_b);
 		send_a_to_b(stack_a, stack_b);
 	}
 	sort_three_nodes(stack_a);
 	while (*stack_b)
 	{
-		init_nodes_b(*stack_a, *stack_b);
+		init_stack_b(*stack_a, *stack_b);
 		prep_for_push(stack_a, (*stack_b)->target_node, 'a');
 		pa(stack_a, stack_b);
 	}

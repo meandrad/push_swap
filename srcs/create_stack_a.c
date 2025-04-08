@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:13:49 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 18:20:33 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:36:10 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	set_index(t_stack_node *stack)
 	if (!stack)
 		return ;
 	median = stack_len(stack) / 2;
-	while (stack != NULL)
+	while (stack)
 	{
 		stack->index = index;
 		if (index <= median)
@@ -29,21 +29,21 @@ void	set_index(t_stack_node *stack)
 		else
 			stack->above_mediam = false;
 		stack = stack->next;
-		index++;
+		++index;
 	}
 }
 
-void	search_target_b(t_stack_node *stack_a, t_stack_node *stack_b)
+void	set_target_a(t_stack_node *stack_a, t_stack_node *stack_b)
 {
 	t_stack_node	*node_b;
 	t_stack_node	*target_node;
 	long			closest_smaller;
 
-	while (stack_a != NULL)
+	while (stack_a)
 	{
 		closest_smaller = LONG_MIN;
 		node_b = stack_b;
-		while (stack_b != NULL)
+		while (node_b)
 		{
 			if (node_b->nbr < stack_a->nbr && node_b->nbr > closest_smaller)
 			{
@@ -67,12 +67,12 @@ void	set_cost(t_stack_node *stack_a, t_stack_node *stack_b)
 
 	length_a = stack_len(stack_a);
 	length_b = stack_len(stack_b);
-	while (stack_a != NULL)
+	while (stack_a)
 	{
 		stack_a->push_cost = stack_a->index;
-		if (stack_a->above_mediam == false)
+		if (!(stack_a->above_mediam))
 			stack_a->push_cost = length_a - (stack_a->index);
-		if (stack_a->target_node->above_mediam == true)
+		if (stack_a->target_node->above_mediam)
 			stack_a->push_cost += stack_a->target_node->index;
 		else
 			stack_a->push_cost += length_b - (stack_a->target_node->index);
@@ -88,7 +88,7 @@ void	cheapest(t_stack_node *stack)
 	if (!stack)
 		return ;
 	cheapest = LONG_MAX;
-	while (stack != NULL)
+	while (stack)
 	{
 		if (stack->push_cost < cheapest)
 		{
@@ -100,11 +100,11 @@ void	cheapest(t_stack_node *stack)
 	cheapest_node->cheapest = true;
 }
 
-void	create_stack_a(t_stack_node *stack_a, t_stack_node *stack_b)
+void	init_stack_a(t_stack_node *stack_a, t_stack_node *stack_b)
 {
 	set_index(stack_a);
 	set_index(stack_b);
-	search_target_b(stack_a, stack_b);
+	set_target_a(stack_a, stack_b);
 	set_cost(stack_a, stack_b);
 	cheapest(stack_a);
 }

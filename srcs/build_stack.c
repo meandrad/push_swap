@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/02 19:22:27 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:29:54 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void	add_node(t_stack_node **stack_a, long n)
 	new_node = malloc(sizeof(t_stack_node));
 	if (!new_node)
 		return ;
-	new_node->nbr = n;
 	new_node->next = NULL;
+	new_node->nbr = n;
 	new_node->cheapest = 0;
-	if (*stack_a == NULL)
+	if (!(*stack_a))
 	{
-		new_node->prev = NULL;
 		*stack_a = new_node;
+		new_node->prev = NULL;
 	}
 	else
 	{

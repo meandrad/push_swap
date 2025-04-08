@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:36:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/02 19:41:44 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:40:12 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,22 @@ void	print_error(t_stack_node **stack)
 	free_stack(stack);
 	ft_putstr("Error\n");
 	exit(1);
+}
+
+void	free_args(char *argv[])
+{
+	int	i;
+
+	i = 0;
+	if (*argv)
+		return ;
+	if (argv != NULL)
+	{
+		while (argv[i])
+		{
+			free(argv[i]);
+			++i;
+		}
+		free(argv);
+	}
 }

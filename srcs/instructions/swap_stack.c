@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 19:30:42 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/30 12:10:45 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:20:47 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,6 @@ void	ss(t_stack_node **stack_a, t_stack_node **stack_b)
 {
 	swap_stack(stack_a);
 	swap_stack(stack_b);
+	ft_putstr("ss");
+	ft_putchar('\n');
 }

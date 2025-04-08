@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:56:21 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/02 21:34:41 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/03 20:40:40 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,20 @@ typedef struct s_stack_node
 
 // ./
 bool			stack_sorted(t_stack_node *stack);
+void			free_args(char *argv[]);
 int				error_input(char *s);
 int				handle_duplicate(t_stack_node *stack, long n);
 int				stack_len(t_stack_node *stack);
 void			add_node(t_stack_node **stack_a, long n);
 void			cheapest(t_stack_node *stack);
-void			init_nodes_b(t_stack_node *stack_a, t_stack_node *stack_b);
-void			create_stack_a(t_stack_node *stack_a, t_stack_node *stack_b);
+void			init_stack_b(t_stack_node *stack_a, t_stack_node *stack_b);
+void			init_stack_a(t_stack_node *stack_a, t_stack_node *stack_b);
 void			free_stack(t_stack_node **stack);
 void			prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name);
 void			print_error(t_stack_node **stack);
 void			put_min_top(t_stack_node **stack_a);
-void			search_target_a(t_stack_node *stack_a, t_stack_node *stack_b);
-void			search_target_b(t_stack_node *stack_a, t_stack_node *stack_b);
+void			set_target_a(t_stack_node *stack_a, t_stack_node *stack_b);
+void			set_target_b(t_stack_node *stack_a, t_stack_node *stack_b);
 void			set_cost(t_stack_node *stack_a, t_stack_node *stack_b);
 void			set_index(t_stack_node *stack);
 void			start_stack_a(t_stack_node **stack_a, char *argv[]);
