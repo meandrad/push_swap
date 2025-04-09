@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:18:03 by meandrad          #+#    #+#             */
-/*   Updated: 2025/03/06 21:27:47 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/08 21:48:41 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ long	ft_atol(const char *s)
 			flag = -1;
 		i++;
 	}
-	while (s[i] != '\0' && ft_isdigit(s[i]) == 1)
+	while (ft_isdigit(s[i]) == 1)
 	{
 		result = result * 10 + (s[i] - '0');
 		i++;

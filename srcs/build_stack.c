@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/08 20:29:49 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/08 21:38:04 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	start_stack_a(t_stack_node **stack_a, char *argv[])
 	i = 0;
 	while (argv[i])
 	{
-		if (error_input(argv[i]) == 0)
+		if (error_input(argv[i]))
 			print_error(stack_a);
 		number = ft_atol(argv[i]);
 		if (number > INT_MAX || number < INT_MIN)

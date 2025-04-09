@@ -13,7 +13,7 @@ SRCS = \
 	srcs/instructions/swap_stack.c \
 	srcs/instructions/sort_stack.c \
 	srcs/instructions/reverse_rotate_stack.c \
-	srcs/instructions/rotate_stack.c
+	srcs/instructions/rotate_stack.c \
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

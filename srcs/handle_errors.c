@@ -6,26 +6,27 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:36:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/03 20:40:12 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/08 21:37:07 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-int	error_input(char *s)
+int	error_input(char *str)
 {
-	int	i;
-
-	i = 0;
-	if (s[i] != '-' || s[i] != '+' || !(s[i] >= '0' && s[i] <= '9'))
+	if (!str || !*str)
 		return (1);
-	if ((s[i] == '-' || s[i] == '+') && !(s[i + 1] >= '0' && s[i + 1] <= '9'))
-		return (1);
-	while (s[i] != '\0')
+	if (*str == '+' || *str == '-')
 	{
-		if (!(s[i] >= '0' && s[i] <= '9'))
+		++str;
+		if (!(*str >= '0' && *str <= '9'))
 			return (1);
-		i++;
+	}
+	while (*str)
+	{
+		if (!(*str >= '0' && *str <= '9'))
+			return (1);
+		++str;
 	}
 	return (0);
 }
