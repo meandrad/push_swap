@@ -6,16 +6,16 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:46:28 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/08 20:16:44 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:26:10 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	set_target_b(t_stack_node *stack_a, t_stack_node *stack_b)
+void	set_target_b(t_node *stack_a, t_node *stack_b)
 {
-	t_stack_node	*node_a;
-	t_stack_node	*target_node;
+	t_node	*node_a;
+	t_node	*target_node;
 	long			match;
 
 	while (stack_b)
@@ -39,7 +39,7 @@ void	set_target_b(t_stack_node *stack_a, t_stack_node *stack_b)
 	}
 }
 
-void	init_stack_b(t_stack_node *stack_a, t_stack_node *stack_b)
+void	init_stack_b(t_node *stack_a, t_node *stack_b)
 {
 	set_index(stack_a);
 	set_index(stack_b);

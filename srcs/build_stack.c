@@ -6,20 +6,20 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:55:41 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/08 21:38:04 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:25:53 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	add_node(t_stack_node **stack_a, long n)
+void	add_node(t_node **stack_a, long n)
 {
-	t_stack_node	*new_node;
-	t_stack_node	*last_node;
+	t_node	*new_node;
+	t_node	*last_node;
 
 	if (!stack_a)
 		return ;
-	new_node = malloc(sizeof(t_stack_node));
+	new_node = malloc(sizeof(t_node));
 	if (!new_node)
 		return ;
 	new_node->next = NULL;
@@ -38,7 +38,7 @@ void	add_node(t_stack_node **stack_a, long n)
 	}
 }
 
-void	start_stack_a(t_stack_node **stack_a, char *argv[])
+void	start_stack_a(t_node **stack_a, char *argv[])
 {
 	long	number;
 	int		i;
@@ -58,7 +58,7 @@ void	start_stack_a(t_stack_node **stack_a, char *argv[])
 	}
 }
 
-t_stack_node	*search_cheapest(t_stack_node *stack)
+t_node	*search_cheapest(t_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -71,7 +71,7 @@ t_stack_node	*search_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top, char stack_name)
+void	prep_for_push(t_node **stack, t_node *top, char stack_name)
 {
 	while (*stack != top)
 	{

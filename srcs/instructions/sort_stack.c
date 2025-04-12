@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 13:19:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/03 20:50:38 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:25:31 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-void	double_rr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
+void	double_rr(t_node **a, t_node **b, t_node *cheap)
 {
 	while (*b != cheap->target_node && *a != cheap)
 		rr(a, b);
@@ -20,7 +20,7 @@ void	double_rr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
 	set_index(*b);
 }
 
-void	double_rrr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
+void	double_rrr(t_node **a, t_node **b, t_node *cheap)
 {
 	while (*b != cheap->target_node && *a != cheap)
 		rrr(a, b);
@@ -28,9 +28,9 @@ void	double_rrr(t_stack_node **a, t_stack_node **b, t_stack_node *cheap)
 	set_index(*b);
 }
 
-void	send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b)
+void	send_a_to_b(t_node **stack_a, t_node **stack_b)
 {
-	t_stack_node	*cheapest;
+	t_node	*cheapest;
 
 	cheapest = search_cheapest(*stack_a);
 	if (cheapest->above_mediam && cheapest->target_node->above_mediam)
@@ -43,7 +43,7 @@ void	send_a_to_b(t_stack_node **stack_a, t_stack_node **stack_b)
 	pb(stack_b, stack_a);
 }
 
-void	sort(t_stack_node **stack_a, t_stack_node **stack_b)
+void	sort(t_node **stack_a, t_node **stack_b)
 {
 	int	lenght_a;
 

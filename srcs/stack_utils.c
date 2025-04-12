@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:42:18 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/08 20:19:29 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:26:38 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-t_stack_node	*search_last_node(t_stack_node *stack)
+t_node	*search_last_node(t_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -21,7 +21,7 @@ t_stack_node	*search_last_node(t_stack_node *stack)
 	return (stack);
 }
 
-int	stack_len(t_stack_node *stack)
+int	stack_len(t_node *stack)
 {
 	int	len;
 
@@ -36,10 +36,10 @@ int	stack_len(t_stack_node *stack)
 	return (len);
 }
 
-t_stack_node	*search_max(t_stack_node *stack)
+t_node	*search_max(t_node *stack)
 {
 	long			max;
-	t_stack_node	*biggest_node;
+	t_node	*biggest_node;
 
 	biggest_node = NULL;
 	if (!stack)
@@ -57,10 +57,10 @@ t_stack_node	*search_max(t_stack_node *stack)
 	return (biggest_node);
 }
 
-t_stack_node	*search_min(t_stack_node *stack)
+t_node	*search_min(t_node *stack)
 {
 	long			min;
-	t_stack_node	*smallest_node;
+	t_node	*smallest_node;
 
 	smallest_node = stack;
 	if (!stack)
@@ -78,7 +78,7 @@ t_stack_node	*search_min(t_stack_node *stack)
 	return (smallest_node);
 }
 
-void	put_min_top(t_stack_node **stack_a)
+void	put_min_top(t_node **stack_a)
 {
 	while ((*stack_a)->nbr != search_min(*stack_a)->nbr)
 	{

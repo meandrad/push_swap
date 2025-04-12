@@ -6,15 +6,15 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 23:48:42 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/08 20:18:32 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:25:04 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-void	push_node(t_stack_node **dest, t_stack_node **src)
+void	push_node(t_node **dest, t_node **src)
 {
-	t_stack_node	*push_node;
+	t_node	*push_node;
 
 	if (!*src)
 		return ;
@@ -36,13 +36,13 @@ void	push_node(t_stack_node **dest, t_stack_node **src)
 	}
 }
 
-void	pa(t_stack_node **stack_a, t_stack_node **stack_b)
+void	pa(t_node **stack_a, t_node **stack_b)
 {
 	push_node(stack_a, stack_b);
 	ft_putstr("pa\n");
 }
 
-void	pb(t_stack_node **stack_b, t_stack_node **stack_a)
+void	pb(t_node **stack_b, t_node **stack_a)
 {
 	push_node(stack_b, stack_a);
 	ft_putstr("pb\n");

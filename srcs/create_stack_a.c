@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:13:49 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/03 20:36:10 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:26:00 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	set_index(t_stack_node *stack)
+void	set_index(t_node *stack)
 {
 	int	index;
 	int	median;
@@ -33,10 +33,10 @@ void	set_index(t_stack_node *stack)
 	}
 }
 
-void	set_target_a(t_stack_node *stack_a, t_stack_node *stack_b)
+void	set_target_a(t_node *stack_a, t_node *stack_b)
 {
-	t_stack_node	*node_b;
-	t_stack_node	*target_node;
+	t_node	*node_b;
+	t_node	*target_node;
 	long			closest_smaller;
 
 	while (stack_a)
@@ -60,7 +60,7 @@ void	set_target_a(t_stack_node *stack_a, t_stack_node *stack_b)
 	}
 }
 
-void	set_cost(t_stack_node *stack_a, t_stack_node *stack_b)
+void	set_cost(t_node *stack_a, t_node *stack_b)
 {
 	int	length_a;
 	int	length_b;
@@ -80,10 +80,10 @@ void	set_cost(t_stack_node *stack_a, t_stack_node *stack_b)
 	}
 }
 
-void	cheapest(t_stack_node *stack)
+void	cheapest(t_node *stack)
 {
 	long			cheapest;
-	t_stack_node	*cheapest_node;
+	t_node	*cheapest_node;
 
 	if (!stack)
 		return ;
@@ -100,7 +100,7 @@ void	cheapest(t_stack_node *stack)
 	cheapest_node->cheapest = true;
 }
 
-void	init_stack_a(t_stack_node *stack_a, t_stack_node *stack_b)
+void	init_stack_a(t_node *stack_a, t_node *stack_b)
 {
 	set_index(stack_a);
 	set_index(stack_b);

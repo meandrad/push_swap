@@ -6,13 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:53:14 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/08 21:56:31 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:26:29 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-bool	stack_sorted(t_stack_node *stack)
+bool	stack_sorted(t_node *stack)
 {
 	if (!stack)
 		return (1);
@@ -27,8 +27,8 @@ bool	stack_sorted(t_stack_node *stack)
 
 int	main(int argc, char *argv[])
 {
-	t_stack_node	*stack_a;
-	t_stack_node	*stack_b;
+	t_node	*stack_a;
+	t_node	*stack_b;
 	char			**args;
 
 	stack_a = NULL;
