@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:56:21 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/12 12:33:28 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/13 11:55:04 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <limits.h>
 # include <unistd.h>
 # include <stdlib.h>
-
 
 typedef struct s_stack_node
 {
