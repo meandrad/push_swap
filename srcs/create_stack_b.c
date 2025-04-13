@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:46:28 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/12 12:26:10 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/13 11:54:17 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	set_target_b(t_node *stack_a, t_node *stack_b)
 {
 	t_node	*node_a;
 	t_node	*target_node;
-	long			match;
+	long	match;
 
 	while (stack_b)
 	{

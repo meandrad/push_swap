@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 11:13:49 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/12 12:26:00 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/13 11:54:10 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	set_target_a(t_node *stack_a, t_node *stack_b)
 {
 	t_node	*node_b;
 	t_node	*target_node;
-	long			closest_smaller;
+	long	closest_smaller;
 
 	while (stack_a)
 	{
@@ -82,7 +82,7 @@ void	set_cost(t_node *stack_a, t_node *stack_b)
 
 void	cheapest(t_node *stack)
 {
-	long			cheapest;
+	long	cheapest;
 	t_node	*cheapest_node;
 
 	if (!stack)

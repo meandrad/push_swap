@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:42:18 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/12 12:26:38 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/13 11:54:32 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	stack_len(t_node *stack)
 
 t_node	*search_max(t_node *stack)
 {
-	long			max;
+	long	max;
 	t_node	*biggest_node;
 
 	biggest_node = NULL;
@@ -59,7 +59,7 @@ t_node	*search_max(t_node *stack)
 
 t_node	*search_min(t_node *stack)
 {
-	long			min;
+	long	min;
 	t_node	*smallest_node;
 
 	smallest_node = stack;

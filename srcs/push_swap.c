@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:53:14 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/12 12:26:29 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/13 11:54:39 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ int	main(int argc, char *argv[])
 {
 	t_node	*stack_a;
 	t_node	*stack_b;
-	char			**args;
+	char	**args;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc == 1 || (argc == 2 && argv[1][0] == '\0'))
-		return (1);
+	if (argc < 2)
+		return (0);
 	args = argv + 1;
 	start_stack_a(&stack_a, args);
 	if (!stack_sorted(stack_a))
