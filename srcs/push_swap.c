@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:53:14 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/13 11:54:39 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/13 12:42:28 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char *argv[])
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc < 2)
+	if (argc <= 2)
 		return (0);
 	args = argv + 1;
 	start_stack_a(&stack_a, args);
@@ -47,7 +47,5 @@ int	main(int argc, char *argv[])
 			sort(&stack_a, &stack_b);
 	}
 	free_stack(&stack_a);
-	if (argc == 2 && args != argv + 1)
-		free_args(argv);
 	return (0);
 }
