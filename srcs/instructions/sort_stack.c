@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 13:19:06 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/12 12:25:31 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/15 22:57:21 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,19 @@ void	double_rrr(t_node **a, t_node **b, t_node *cheap)
 		rrr(a, b);
 	set_index(*a);
 	set_index(*b);
+}
+
+bool	stack_sorted(t_node *stack)
+{
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->nbr > stack->next->nbr)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }
 
 void	send_a_to_b(t_node **stack_a, t_node **stack_b)

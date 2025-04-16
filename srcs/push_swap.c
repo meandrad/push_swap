@@ -6,24 +6,11 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 13:53:14 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/13 12:42:28 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/15 22:57:09 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-bool	stack_sorted(t_node *stack)
-{
-	if (!stack)
-		return (1);
-	while (stack->next)
-	{
-		if (stack->nbr > stack->next->nbr)
-			return (0);
-		stack = stack->next;
-	}
-	return (1);
-}
 
 int	main(int argc, char *argv[])
 {
