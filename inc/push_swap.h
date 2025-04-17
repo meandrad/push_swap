@@ -6,7 +6,7 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:56:21 by meandrad          #+#    #+#             */
-/*   Updated: 2025/04/13 11:55:04 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/04/17 19:11:26 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,5 @@ int		error_input(char *str);
 int		handle_duplicate(t_node *stack, long n);
 void	free_stack(t_node **stack);
 void	print_error(t_node **stack);
-void	free_args(char *argv[]);
 
 #endif
